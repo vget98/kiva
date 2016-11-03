@@ -9,6 +9,7 @@ angular.module('loanlist', [])
         api.getNewLoans()
           .then(function(response) {
             $scope.list = response.loans;
+            console.log($scope.list);
           })
           .catch(function(err) {
             console.log(err);
