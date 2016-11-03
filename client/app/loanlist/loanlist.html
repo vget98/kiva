@@ -5,11 +5,30 @@
 
   <table>
     <tr>
-      <th>ID</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Use</th>
+      <th>Languages</th>
+      <th>Funded Amount</th>
+      <th>Activity</th>
+      <th>Sector</th>
+      <th>Partner Id</th>
+      <th>Status</th>
+      <th>Credit Elgibility</th>
     </tr>
-
     <tr ng-repeat="loans in list">
       <td>{{ loans.id }}</td>
+      <td>{{ loans.name }}</td>
+      <td>{{ loans.location.town }}, <strong>{{loans.location.country}}</strong></td>
+      <td>{{ loans.use }}</td>
+      <td>{{ loans.description.languages }}</td>
+      <td>{{ loans.funded_amount }}</td>
+      <td>{{ loans.activity }}</td>
+      <td>{{ loans.sector }}</td>
+      <td>{{ loans.partner_id }}</td>
+      <td>{{ loans.status }}</td>
+      <td>{{ loans.bonus_credit_eligibility }}</td>
     </tr>
   </table>
 </div>
