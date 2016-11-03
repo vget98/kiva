@@ -2,4 +2,14 @@
   <div>
     <button type="submit" name="data" ng-click="get()">Get Newest Loans</button>
   </div>
+
+  <table>
+    <tr>
+      <th>ID</th>
+    </tr>
+
+    <tr ng-repeat="loans in list">
+      <td>{{ loans.id }}</td>
+    </tr>
+  </table>
 </div>
