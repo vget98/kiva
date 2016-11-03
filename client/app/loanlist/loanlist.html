@@ -1,6 +1,7 @@
 <div ng-controller="loanlistController">
   <div>
     <button type="submit" name="data" ng-click="get()">Get Newest Loans</button>
+    <label>Filter By ID: <input type="text" name="search" ng-model="search.id"></label>
   </div>
 
   <table>
@@ -17,7 +18,7 @@
       <th>Status</th>
       <th>Credit Elgibility</th>
     </tr>
-    <tr ng-repeat="loans in list">
+    <tr ng-repeat="loans in list | filter:search:strict">
       <td>{{ loans.id }}</td>
       <td>{{ loans.name }}</td>
       <td>{{ loans.location.town }}, <strong>{{loans.location.country}}</strong></td>
